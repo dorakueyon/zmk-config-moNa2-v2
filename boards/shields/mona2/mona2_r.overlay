@@ -17,6 +17,29 @@
             ;
 };
 
+/ {
+    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <
+            20 // L
+            22 // Z
+            30 // M
+            31 // ,
+            32 // .
+            34 // Shift
+            36 // Command
+        >;
+    };
+
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 2 10000>;
+    };
+};
+
 
 &pinctrl {
     spi0_default: spi0_default {    //通常時(SPI通信中)のピン構成
@@ -66,7 +89,7 @@
     device = <&trackball_central>;
 
     scroller {
-        layers = <3>;
+        layers = <6>;
         input-processors = 
             // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
