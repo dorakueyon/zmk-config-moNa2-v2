@@ -142,10 +142,10 @@
 
         SPECIAL {
             bindings = <
-&kp LS(S)      &kp LS(D)  &kp LS(F15)  &kp LG(MINUS)         &kp LG(PLUS)                                   &bt_to_0  &bt_to_1       &bt BT_SEL 2   &bt BT_SEL 3   &bt_to_4
-&trans         &trans     &kp LS(F16)  &kp LS(F17)           &kp LS(F18)                            &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
-&bt BT_DISC 4  &trans     &trans       &kp LS(LG(NUMBER_5))  &kp LG(LC(C))  &kp LS(LG(NUMBER_4))    &trans  &trans    &to 0          &to 1          &trans         &trans
-&bt BT_CLR     &trans     &trans       &trans                &trans         &trans                  &trans  &trans                                                 &trans
+&kp LS(S)   &kp LS(D)  &kp LS(F15)           &kp LG(MINUS)  &kp LG(PLUS)                            &bt_to_0       &bt_to_1       &bt BT_SEL 2   &bt BT_SEL 3   &bt_to_4
+&trans      &trans     &kp LS(F16)           &kp LS(F17)    &kp LS(F18)                     &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&trans      &trans     &kp LG(LS(NUMBER_5))  &kp LG(LC(C))  &kp LG(LS(NUMBER_4))  &trans    &trans  &to 0          &to 1          &trans         &trans         &bt BT_CLR
+&bt BT_CLR  &trans     &trans                &trans         &trans                &trans    &trans  &trans                                                      &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP LA(C_VOLUME_DOWN)>;
