@@ -131,10 +131,10 @@
 
         SYMBOL {
             bindings = <
-&kp CARET          &kp EXCLAMATION              &kp AMPERSAND      &kp PIPE              &kp DOLLAR                                        &kp AT_SIGN  &kp EQUAL           &kp PLUS             &kp ASTERISK     &kp PERCENT
-&mt LCTRL MINUS    &mt LEFT_SHIFT LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                     &trans  &trans       &kp LEFT_ARROW      &kp DOWN_ARROW       &kp UP_ARROW     &kp RIGHT_ARROW
-&kp SINGLE_QUOTE   &mt LEFT_SHIFT MINUS         &kp HASH           &kp NON_US_BACKSLASH  &kp LEFT_BRACE         &kp RIGHT_BRACE    &trans  &trans       &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(LS(TAB))  &kp LC(TAB)
-&kp DOUBLE_QUOTES  &kp LEFT_ALT                 &trans             &trans                &lt_to_layer_0 2 A     &trans             &trans  &trans                                                                 &trans
+&kp CARET             &kp EXCLAMATION              &kp AMPERSAND      &kp PIPE              &kp DOLLAR                               &kp AT_SIGN         &kp EQUAL            &kp PLUS         &kp ASTERISK     &kp PERCENT
+&mt LCTRL MINUS       &mt LEFT_SHIFT LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS            &trans  &kp LEFT_ARROW      &kp DOWN_ARROW       &kp RIGHT_ARROW  &kp RIGHT_ARROW  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT MINUS  &kp HASH                     &kp BACKSLASH      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(LS(TAB))  &kp LC(TAB)      &kp DOUBLE_QUOTES
+&kp LEFT_ALT          &trans                       &trans             &lt_to_layer_0 2 A    &trans                 &trans    &trans  &trans                                                                     &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
