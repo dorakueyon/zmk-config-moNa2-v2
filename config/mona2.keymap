@@ -32,6 +32,27 @@
 
             label = "TO_LAYER_0";
         };
+
+        bt_to_0: test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "TEST";
+        };
+
+        bt_to_4: layer_to_android {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 1>;
+            label = "LAYER_TO_ANDROID";
+        };
+
+        bt_to_1: bt_to_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 0>;
+            label = "BT_TO_1";
+        };
     };
 
     behaviors {
@@ -77,10 +98,10 @@
 
         ANDROID {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kt Q                 &kt W             &kt E                   &kt R        &kt T                                         &kt Y        &kt U  &kt I      &kt O       &kt P
+&mt LEFT_CONTROL A    &mt LEFT_SHIFT S  &kt D                   &kt F        &kt G      &trans              &trans         &kt H        &kt J  &kt K      &kt L       &mt RIGHT_ALT SEMICOLON
+&mt LEFT_SHIFT Z      &kt X             &kt C                   &kt V        &lt 6 B    &trans              &trans         &kt N        &kt M  &kt COMMA  &kt PERIOD  &mt RIGHT_CONTROL SLASH
+&mt LEFT_SHIFT LANG2  &kp LEFT_WIN      &mt LEFT_CONTROL LANG2  &lt 3 SPACE  &lt 5 ESC  &mt LEFT_ALT TAB    &kp BACKSPACE  &lt 4 ENTER                                &mt RSHIFT LANG1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -121,9 +142,9 @@
 
         SPECIAL {
             bindings = <
-&kp LS(S)  &kp LS(D)  &kp LS(F15)           &kp LG(MINUS)  &kp LG(PLUS)                            &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+&kp LS(S)  &kp LS(D)  &kp LS(F15)           &kp LG(MINUS)  &kp LG(PLUS)                            &bt_to_0       &bt_to_1       &bt BT_SEL 2   &bt BT_SEL 3   &bt_to_4
 &trans     &trans     &kp LS(F16)           &kp LS(F17)    &kp LS(F18)           &trans    &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-&trans     &trans     &kp LS(LG(NUMBER_5))  &kp LG(LC(C))  &kp LS(LG(NUMBER_4))  &trans    &trans  &trans         &trans         &trans         &trans         &bt BT_CLR
+&trans     &trans     &kp LS(LG(NUMBER_5))  &kp LG(LC(C))  &kp LS(LG(NUMBER_4))  &trans    &trans  &to 0          &to 1          &trans         &trans         &bt BT_CLR
 &trans     &trans     &trans                &trans         &trans                &trans    &trans  &trans                                                      &bt BT_CLR_ALL
             >;
 
