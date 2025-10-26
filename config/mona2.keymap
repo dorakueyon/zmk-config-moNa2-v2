@@ -109,10 +109,10 @@
 
         NUMBER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kp CARET             &kp EXCLAMATION          &kp AMPERSAND     &kp PIPE           &kp DOLLAR                      &kp AT_SIGN        &kp EQUAL     &kp PLUS      &kp ASTERISK  &kp PERCENT
+&kp NUMBER_1          &mt LEFT_SHIFT NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5            &trans  &kp NUMBER_6       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&mt LEFT_SHIFT MINUS  &kp GRAVE                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE     &trans    &trans  &kp BACKSLASH      &kp GRAVE     &trans        &trans        &trans
+&trans                &trans                   &trans            &trans             &trans        &trans    &trans  &kp RIGHT_COMMAND                                            &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
