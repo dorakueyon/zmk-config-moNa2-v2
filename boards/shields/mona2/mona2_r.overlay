@@ -3,6 +3,15 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 2 10000>;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
