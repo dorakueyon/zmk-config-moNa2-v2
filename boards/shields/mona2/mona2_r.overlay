@@ -5,10 +5,10 @@
 &zip_temp_layer {
     excluded-positions = <
         22 // Z
-        29 // M
         30 // M
         31 // ,
         32 // .
+        34 // SHIFT
         36 // Command
     >;
 };
